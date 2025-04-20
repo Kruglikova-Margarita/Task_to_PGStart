@@ -2,8 +2,8 @@ import xml.etree.ElementTree as ET
 import psycopg2
 from psycopg2 import sql
 
-set_user = "postgres"
-set_password = "1579"
+set_user = "your_name"
+set_password = "your_password"
 path_to_xml_files_folder = "data\\dba.stackexchange.com\\"
 
 def connect():
