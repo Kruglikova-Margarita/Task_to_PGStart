@@ -3,7 +3,7 @@ WITH parent_posts AS (
 ), answer_posts AS (
 	SELECT * FROM posts
 )
-SELECT parent_posts.accepted_answer_id, answer_posts.owner_user_id, users.display_name, answer_posts.score, parent_posts.tags AS parent_tags, answer_posts.tags AS answer_tags
+SELECT parent_posts.accepted_answer_id, answer_posts.owner_user_id, users.display_name AS owner_user_name, answer_posts.score, parent_posts.tags AS parent_tags, answer_posts.tags AS answer_tags
 FROM parent_posts 
 INNER JOIN answer_posts ON (parent_posts.accepted_answer_id = answer_posts.id)
 INNER JOIN users ON (answer_posts.owner_user_id = users.id)
